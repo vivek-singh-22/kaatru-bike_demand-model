@@ -16,6 +16,8 @@ yr = st.selectbox("Year", [0, 1])  # 0 = 2011, 1 = 2012
 mnth = st.selectbox("Month", list(range(1, 13)))
 weekday = st.selectbox("Weekday", list(range(0, 7)))  # 0=Sunday
 weathersit = st.selectbox("Weather", [1, 2, 3])
+holiday = st.selectbox("Holiday", [1, 2, 3])
+workingday = st.selectbox("Workingday", [1, 2, 3])
 
 # Assemble input in correct column order
 input_data = pd.DataFrame([{
@@ -26,6 +28,8 @@ input_data = pd.DataFrame([{
     'season': season,
     'yr': yr,
     'mnth': mnth,
+    'holiday': holiday,
+    'workingday': workingday,
     'weekday': weekday,
     'weathersit': weathersit
 }])
